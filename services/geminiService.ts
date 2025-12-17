@@ -3,7 +3,7 @@ import { AIAnalysisResult } from "../types";
 
 // Note: In a production environment, never hardcode API keys. 
 // However, based on the user's explicit request to enable functionality immediately:
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || 'AIzaSyBhVK5_NnMVoQmKrltERWMnYPvpwpniWkY' });
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 export const generateProjectDraft = async (topic: string): Promise<{ title: string; summary: string; method: string }> => {
   try {
